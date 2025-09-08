@@ -79,20 +79,24 @@ body {
   padding-left: 1vw;
   padding-right: 1vw;
   float: left;
+  font-weight: 400;
   
   h3 {
     text-align: center;
   }
 
   #winds:hover {
-    color:white;
+    font-weight: 600;
+    .active {
+      width: 50%;
+    }
   }
 
   #pressure:hover {
-    color:white;
+    font-weight: 600;
   }
 
   #dir:hover {
-    color:white;
+    font-weight: 600;
   }
 }
