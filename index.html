@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap');
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tropical Tracking</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+  <div class="header">
+    <ul>
+      <li id="title">Notes of the Tropics</li>
+      <li><a href="#" id="live">Live Q&A</a></li>
+      <li><a href="#">Imagery</a></li>
+      <li><a href="#" id="main">Main</a></li>
+    </ul>
+    <script>
+      function updateLiText() {
+        li = document.getElementById('live');
+        if (window.innerWidth < 501) {
+          li.textContent = "Main";
+        } else {
+          li.textContent = "Live Q&A";
+        }
+        li = document.getElementById('main');
+        if (window.innerWidth < 501) {
+          li.textContent = "Live Q&A";
+        } else {
+          li.textContent = "Main";
+        }
+      }
+  
+      // Run on load
+      updateLiText();
+  
+      // Run on resize
+      window.addEventListener('resize', updateLiText);
+    </script>
+  </div>
+  <br><br>
+  <div class="active">
+    <h3>Active Storms</h3>
+    <ul>
+      <li>Invest 91L</li>
+      <ul>
+        <li id="winds">Winds: 30 MPH</li>
+        <li id="pressure">Pressure: 1011 mb</li>
+        <li id="dir">Direction at Speed: WSW @ 8 mph</li>
+      </ul>
+    </ul>
+    <h5>Invest 91L has completely diminished and does not pose any threats anymore. This is only shown as a placeholder for site development.</h5>
+    <p><i>Last updated 9/8/2025 9:45A EST</i></p>
+  </div>
+  <div class="main">
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
