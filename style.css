@@ -84,16 +84,4 @@ body {
   h3 {
     text-align: center;
   }
-
-  #winds:hover {
-    font-weight: 600;
-  }
-
-  #pressure:hover {
-    font-weight: 600;
-  }
-
-  #dir:hover {
-    font-weight: 600;
-  }
 }
