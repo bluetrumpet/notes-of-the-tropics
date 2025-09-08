@@ -87,9 +87,7 @@ body {
 
   #winds:hover {
     font-weight: 600;
-    .active {
-      width: 50%;
-    }
+    width: 50%;
   }
 
   #pressure:hover {
