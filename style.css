@@ -74,14 +74,19 @@ body {
 }
 
 .active {
+  position: relative; /* parent must be relative */
   width: 30%;
+  transition: width 0.3s;
   background-color: aliceblue;
   padding-left: 1vw;
   padding-right: 1vw;
   float: left;
   font-weight: 400;
-  
-  h3 {
-    text-align: center;
-  }
+}
+
+.active h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
 }
