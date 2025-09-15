@@ -46,7 +46,7 @@ body {
   background-color: #a6a6a6;
 }
 
-@media (max-width: 501px) {
+@media (max-width: 540px) {
   .header ul {
     overflow: visible; /* allow vertical stacking */
   }
@@ -74,19 +74,33 @@ body {
 }
 
 .active {
-  position: relative; /* parent must be relative */
   width: 30%;
-  transition: width 0.3s;
   background-color: aliceblue;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding: 1rem;           /* even spacing inside */
   float: left;
-  font-weight: 400;
+  transition: width 0.4s ease;
+  position: relative;      /* needed for absolute children */
+  box-sizing: border-box;
 }
 
 .active h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#winds:hover {
+  font-weight: 600;
+}
+
+#pressure:hover {
+  font-weight: 600;
+}
+
+#speed:hover {
+  font-weight: 600;
+}
+
+#defineWinds, #definePressure, #defineDir {
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
 }
