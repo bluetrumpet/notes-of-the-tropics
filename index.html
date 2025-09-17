@@ -7,7 +7,7 @@
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Tropical Tracking</title>
+  <title>Notes of the Tropics</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   
 </head>
@@ -23,7 +23,7 @@
     <script>
       function updateLiText() {
         li = document.getElementById('live');
-        if (window.innerWidth < 501) {
+        if (window.innerWidth < 580) {
           li.textContent = "Main";
         } else {
           li.textContent = "Live Q&A";
@@ -44,19 +44,21 @@
     </script>
   </div>
   <br><br>
+
+  
   <div class="active" id="active">
     <h3>Active Storms</h3>
     <ul>
       <li>Invest 92L</li>
       <ul>
-        <li id="winds">Winds: 30 MPH</li>
+        <li id="winds">Winds: 35 MPH</li>
         <ul>
-          <li id="defineWinds" style="display: none;">The "winds" statistic are the <i>maximum</i> sustained winds that a tropical storm or hurricane produces.<br><br>In this case, Invest 92L's maximum winds are around 30 MPH, around average for a storm trying to organize.<br></li>
+          <li id="defineWinds" style="display: none;">The "winds" statistic are the <i>maximum</i> sustained winds that a tropical storm or hurricane produces.<br><br>In this case, Invest 92L's maximum winds are around 35 MPH, definitely steadily increasing over time.<br></li>
         </ul>
         
-        <li id="pressure">Pressure: 1010 mb</li>
+        <li id="pressure">Pressure: 1007 mb</li>
         <ul>
-          <li id="definePressure" style="display: none;">Pressure refers to barometric pressure, or the weight of the air above a surface. A lower barometric pressure at the storm's center indicates a stronger, more intense hurricane.<br><br>A pressure of 1010, like Invest 92L, is around average for an organizing storm.<br></li>
+          <li id="definePressure" style="display: none;">Pressure refers to barometric pressure, or the weight of the air above a surface. A lower barometric pressure at the storm's center indicates a stronger, more intense hurricane.<br><br>A pressure 1007 is above average for a typical disturbance, showing signs of organization.<br></li>
         </ul>
         
         <li id="speed">Direction at Speed: WNW @ 10-15 mph</li>
@@ -65,11 +67,24 @@
         </ul>
       </ul>
     </ul>
-    <h5>With the 2:00 update from the National Hurricane Center, Invest 92L has upgraded to 50%/90% organization over 2/7 days, respectively. Winds and Pressure have not changed since the 8AM update. <i>Last updated 9/15/2025 3:30P EST</i></h5>
-    <h5 style="">Invest 92L is a growing depression in the Atlantic Ocean, with 40% organization over 2 days, and 80% over 7 days. <i>Last updated 9/15/2025 9:30A EST</i></h5>
-    <p></p>
+    <h5>At the 2:00 PM update from the NHC, i92L has upgraded to 90%/90% orgainzation over 2/7 days, respectively. This storm is very likely to become Tropical Storm Gabrielle, even as soon as Thursday morning. <i>Last updated 9/16/2025 5:45P EST</i></h5>
+    <h5>With the 2:00 PM update from the National Hurricane Center, Invest 92L has upgraded to 50%/90% organization over 2/7 days, respectively. Winds and Pressure have not changed since the 8AM update. <i>Last updated 9/15/2025 3:30P EST</i></h5>
+    <h5>Invest 92L is a growing depression in the Atlantic Ocean, with 40% organization over 2 days, and 80% over 7 days. <i>Last updated 9/15/2025 9:30A EST</i></h5>
+    <h5>No prior notes</h5>
   </div>
-  <div class="main">
+  <div class="mainHeader" id="mainHeader">
+    <span class="prev">&#10094;</span>
+    <h3>Invest 92L Imagery</h3>
+    <span class="next">&#10095;</span>
+  </div>
+  <div class="carousel" id="carousel">
+    <div class="slides">
+      <img src="https://www.ospo.noaa.gov/tropical-floaters/92L/imagery/rbtop-animated.gif" id="gif1">
+      <img src="https://cyclonicwx.com/data/sat/gifs/92L_vis.gif" id="gif2">
+      <img src="https://cyclonicwx.com/data/sat/gifs/92L_rgb.gif" id="gif3">
+      <img src="https://cyclonicwx.com/data/sat/gifs/92L_avn.gif" id="gif4">
+      <h4>More imagery coming</h4>
+    </div>
     
   </div>
   <script src="script.js"></script>
