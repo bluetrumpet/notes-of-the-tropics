@@ -33,7 +33,7 @@ body {
   text-align: center;
   padding: 14px 5vw;
   text-decoration: none;
-  
+
 }
 
 .header #title {
@@ -52,10 +52,12 @@ body {
 .active {
   width: 30%;
   background-color: aliceblue;
-  padding: 1rem;           /* even spacing inside */
+  padding: 1rem;
+  /* even spacing inside */
   float: left;
   transition: width 0.3s ease;
-  position: relative;      /* needed for absolute children */
+  position: relative;
+  /* needed for absolute children */
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
@@ -67,7 +69,7 @@ body {
 }
 
 .active h5 {
-  width:20vw;
+  width: 20vw;
   text-align: center;
   padding-left: 1.75vw;
   padding-right: 1.75vw;
@@ -85,7 +87,9 @@ body {
   font-weight: 600;
 }
 
-#defineWinds, #definePressure, #defineDir {
+#defineWinds,
+#definePressure,
+#defineDir {
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
 }
@@ -94,65 +98,50 @@ body {
   background-color: aliceblue;
   width: 68%;
   float: right;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
   border-radius: 20px;
   transition: width 0.3s ease;
-  h3 {
-    text-align: center;
-  }
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
 }
 
 .carousel {
   margin-top: 2vh;
   background-color: #e4f1eb;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
   border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  /* Enables Flexbox for the container */
+  justify-content: center;
+  /* Centers items horizontally along the main axis */
+  align-items: center;
   width: 68%;
   float: right;
   transition: width 0.3s ease;
 }
 
-.mainHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* space between arrows and title */
-  font-weight: bold;
-}
-
-.mainHeader span {
-  cursor: pointer;
-  user-select: none;
-}
-
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
 
 .slides img {
   height: 25vh;
-  flex-shrink: 0;
-  padding: 2vh 1vw;
+  padding: 2vh 1.5vw;
   border-radius: 20px;
 }
 
-.slides h4 {
-  height: 25vh;
-  padding-left: 1vw;
-  
-}
 
 @media (max-width: 580px) {
   .header ul {
-    overflow: visible; /* allow vertical stacking */
+    overflow: visible;
+    /* allow vertical stacking */
   }
 
   .header ul li {
-    float: none;       /* remove horizontal float */
-    width: 100%;       /* make each item full width */
+    float: none;
+    /* remove horizontal float */
+    width: 100%;
+    /* make each item full width */
     padding-top: 0.1vh;
   }
 
@@ -174,7 +163,7 @@ body {
   .active {
     width: 100%;
     font-weight: 400;
-    
+
     h3 {
       text-align: center;
     }
@@ -183,6 +172,7 @@ body {
       width: 50vh;
       text-align: center;
     }
+
     #winds:hover {
       font-weight: 400;
     }
@@ -194,6 +184,7 @@ body {
     #speed:hover {
       font-weight: 400;
     }
+
     #winds:active {
       font-weight: 600;
     }
@@ -205,5 +196,24 @@ body {
     #speed:active {
       font-weight: 600;
     }
+
+  }
+
+  .mainHeader {
+    margin-top: 2vh;
+    width: 100%;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .slides img {
+    height: 100%;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+    padding: 0.5vh;
   }
 }
