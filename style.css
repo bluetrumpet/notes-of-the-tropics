@@ -18,6 +18,8 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.8);
 }
 
 .header ul li {
@@ -44,9 +46,106 @@ body {
 
 .header ul li a:hover {
   background-color: #a6a6a6;
+  border-radius: 15px;
 }
 
-@media (max-width: 540px) {
+.active {
+  width: 30%;
+  background-color: aliceblue;
+  padding: 1rem;           /* even spacing inside */
+  float: left;
+  transition: width 0.3s ease;
+  position: relative;      /* needed for absolute children */
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.active h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.active h5 {
+  width:20vw;
+  text-align: center;
+  padding-left: 1.75vw;
+  padding-right: 1.75vw;
+}
+
+#winds:hover {
+  font-weight: 600;
+}
+
+#pressure:hover {
+  font-weight: 600;
+}
+
+#speed:hover {
+  font-weight: 600;
+}
+
+#defineWinds, #definePressure, #defineDir {
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+
+.mainHeader {
+  background-color: aliceblue;
+  width: 68%;
+  float: right;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+  h3 {
+    text-align: center;
+  }
+}
+
+.carousel {
+  margin-top: 2vh;
+  background-color: #e4f1eb;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 68%;
+  float: right;
+  transition: width 0.3s ease;
+}
+
+.mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* space between arrows and title */
+  font-weight: bold;
+}
+
+.mainHeader span {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  height: 25vh;
+  flex-shrink: 0;
+  padding: 2vh 1vw;
+  border-radius: 20px;
+}
+
+.slides h4 {
+  height: 25vh;
+  padding-left: 1vw;
+  
+}
+
+@media (max-width: 580px) {
   .header ul {
     overflow: visible; /* allow vertical stacking */
   }
@@ -67,40 +166,44 @@ body {
     background-color: #d2d2d2;
     padding: 1.5vh;
   }
-  
+
   .header ul li a:hover {
     background-color: #a6a6a6;
   }
-}
 
-.active {
-  width: 30%;
-  background-color: aliceblue;
-  padding: 1rem;           /* even spacing inside */
-  float: left;
-  transition: width 0.4s ease;
-  position: relative;      /* needed for absolute children */
-  box-sizing: border-box;
-}
+  .active {
+    width: 100%;
+    font-weight: 400;
+    
+    h3 {
+      text-align: center;
+    }
 
-.active h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+    h5 {
+      width: 50vh;
+      text-align: center;
+    }
+    #winds:hover {
+      font-weight: 400;
+    }
 
-#winds:hover {
-  font-weight: 600;
-}
+    #pressure:hover {
+      font-weight: 400;
+    }
 
-#pressure:hover {
-  font-weight: 600;
-}
+    #speed:hover {
+      font-weight: 400;
+    }
+    #winds:active {
+      font-weight: 600;
+    }
 
-#speed:hover {
-  font-weight: 600;
-}
+    #pressure:active {
+      font-weight: 600;
+    }
 
-#defineWinds, #definePressure, #defineDir {
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+    #speed:active {
+      font-weight: 600;
+    }
+  }
 }
