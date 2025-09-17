@@ -2,36 +2,6 @@ const winds = document.getElementById('winds');
 const pressure = document.getElementById('pressure');
 const dir = document.getElementById('speed');
 
-let index = 0;
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const total = images.length;
-
-function getOffset(i) {
-  let offset = 0;
-  for (let j = 0; j < i; j++) {
-    offset += images[j].offsetWidth; // add widths of all previous images
-  }
-  return offset;
-}
-
-function updateSlide() {
-  const offset = getOffset(index);
-  slides.style.transform = `translateX(${-offset}px)`;
-}
-
-document.querySelector('.next').addEventListener('click', () => {
-  index = (index + 1) % total;
-  updateSlide();
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  index = (index - 1 + total) % total;
-  updateSlide();
-});
-
-window.addEventListener('resize', updateSlide);
-
 // winds
 if (window.innerWidth > 580) {
 winds.addEventListener('mouseenter', () => {
@@ -99,4 +69,14 @@ dir.addEventListener('mouseleave', () => {
   dir.addEventListener('mouseup', () => {
     document.getElementById("defineDir").style.display = "none";
   });
+}
+
+function showNotes() {
+  if (document.getElementById("hidden").style.display == "none") {
+    document.getElementById("hidden").style.display = "block";
+    document.getElementById("showNotes").innerHTML = "Hide prior notes";
+  } else {
+    document.getElementById("hidden").style.display = "none";
+    document.getElementById("showNotes").innerHTML = "Show prior notes";
+  }
 }
