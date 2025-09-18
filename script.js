@@ -45,7 +45,22 @@ dir.addEventListener('mouseleave', () => {
   document.getElementById("mainHeader").style.width = "68%";
   document.getElementById("carousel").style.width = "68%";
 });
-} else {
+}
+
+function showNotes() {
+  if (document.getElementById("hidden").style.display == "none") {
+    document.getElementById("hidden").style.display = "block";
+    document.getElementById("showNotes").innerHTML = "Hide prior notes";
+  } else {
+    document.getElementById("hidden").style.display = "none";
+    document.getElementById("showNotes").innerHTML = "Show prior notes";
+  }
+}
+
+
+/*
+
+ else {
   winds.addEventListener('mousedown', () => {
     document.getElementById("defineWinds").style.display = "block";
   });
@@ -71,12 +86,4 @@ dir.addEventListener('mouseleave', () => {
   });
 }
 
-function showNotes() {
-  if (document.getElementById("hidden").style.display == "none") {
-    document.getElementById("hidden").style.display = "block";
-    document.getElementById("showNotes").innerHTML = "Hide prior notes";
-  } else {
-    document.getElementById("hidden").style.display = "none";
-    document.getElementById("showNotes").innerHTML = "Show prior notes";
-  }
-}
+*/
