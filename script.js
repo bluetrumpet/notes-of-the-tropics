@@ -3,7 +3,7 @@ const pressure = document.getElementById('pressure');
 const dir = document.getElementById('speed');
 
 // winds
-///if (window.innerWidth > 580) {
+if (window.innerWidth > 580) {
 winds.addEventListener('mouseenter', () => {
   document.getElementById("defineWinds").style.display = "block";
   document.getElementById("active").style.width = "40%";
@@ -45,7 +45,15 @@ dir.addEventListener('mouseleave', () => {
   document.getElementById("mainHeader").style.width = "68%";
   document.getElementById("carousel").style.width = "68%";
 });
-///}
+} else {
+  function showDesc(item) {
+    if (document.getElementById(item).style.display == "none") {
+      document.getElementById(item).style.display = "block"
+    } else {
+      document.getElementById(item).style.display = "none";
+    }
+  }
+}
 
 function showNotes() {
   if (document.getElementById("hidden").style.display == "none") {
@@ -56,34 +64,3 @@ function showNotes() {
     document.getElementById("showNotes").innerHTML = "Show prior notes";
   }
 }
-
-
-/*
-
- else {
-  winds.addEventListener('mousedown', () => {
-    document.getElementById("defineWinds").style.display = "block";
-  });
-
-  winds.addEventListener('mouseup', () => {
-    document.getElementById("defineWinds").style.display = "none";
-  });
-
-  pressure.addEventListener('mousedown', () => {
-    document.getElementById("definePressure").style.display = "block";
-  });
-
-  pressure.addEventListener('mouseup', () => {
-    document.getElementById("definePressure").style.display = "none";
-  });
-
-  dir.addEventListener('mousedown', () => {
-    document.getElementById("defineDir").style.display = "block";
-  });
-
-  dir.addEventListener('mouseup', () => {
-    document.getElementById("defineDir").style.display = "none";
-  });
-}
-
-*/
