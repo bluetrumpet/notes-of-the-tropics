@@ -3,7 +3,7 @@ const pressure = document.getElementById('pressure');
 const dir = document.getElementById('speed');
 
 // winds
-if (window.innerWidth > 580) {
+///if (window.innerWidth > 580) {
 winds.addEventListener('mouseenter', () => {
   document.getElementById("defineWinds").style.display = "block";
   document.getElementById("active").style.width = "40%";
@@ -45,7 +45,7 @@ dir.addEventListener('mouseleave', () => {
   document.getElementById("mainHeader").style.width = "68%";
   document.getElementById("carousel").style.width = "68%";
 });
-}
+///}
 
 function showNotes() {
   if (document.getElementById("hidden").style.display == "none") {
