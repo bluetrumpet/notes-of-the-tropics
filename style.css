@@ -134,14 +134,12 @@ body {
 @media (max-width: 580px) {
   .header ul {
     overflow: visible;
-    /* allow vertical stacking */
+    justify-content: center;
   }
 
   .header ul li {
     float: none;
-    /* remove horizontal float */
     width: 100%;
-    /* make each item full width */
     padding-top: 0.1vh;
   }
 
@@ -152,7 +150,6 @@ body {
 
   .header #title {
     float: none;
-    background-color: #d2d2d2;
     padding: 1.5vh;
   }
 
@@ -173,30 +170,6 @@ body {
       text-align: center;
     }
 
-    #winds:hover {
-      font-weight: 400;
-    }
-
-    #pressure:hover {
-      font-weight: 400;
-    }
-
-    #speed:hover {
-      font-weight: 400;
-    }
-
-    #winds:active {
-      font-weight: 600;
-    }
-
-    #pressure:active {
-      font-weight: 600;
-    }
-
-    #speed:active {
-      font-weight: 600;
-    }
-
   }
 
   .mainHeader {
@@ -213,7 +186,8 @@ body {
     width: 75vw;
     display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     padding: 0.5vh;
   }
+
 }
