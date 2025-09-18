@@ -63,6 +63,11 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
+.active ul li a {
+  text-decoration: none;
+  color: black;
+}
+
 .active h3 {
   margin-top: 0px;
   margin-bottom: 0px;
